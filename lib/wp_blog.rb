@@ -41,8 +41,13 @@ class WPBlog < ActiveRecord::Base
     end
     
     (class << self; self; end).class_eval do
-      has_many :options, :class_name => "WP#{blog_id}Option", :finder_sql => "SELECT * FROM wp_#{blog_id}_options", :extend => OptionExtension
+      has_many :options, :class_name => "WP#{blog_id}Option", :foreign_key => :blog_id, :extend => OptionExtension
     end
+  end
+  
+  # this may not be a great idea
+  def quoted_id
+    0
   end
   
 end
