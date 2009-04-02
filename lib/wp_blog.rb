@@ -39,6 +39,10 @@ class WPBlog < ActiveRecord::Base
         has_many :comments, :class_name => comment_class, :foreign_key => :comment_post_id
       end
     end
+    
+    (class << self; self; end).class_eval do
+      has_many :options, :class_name => "WP#{blog_id}Option", :finder_sql => "SELECT * FROM wp_#{blog_id}_options", :extend => OptionExtension
+    end
   end
   
 end
