@@ -4,10 +4,6 @@
 
 = OPEN QUESTIONS =
 What are these columns/what values can they hold?
-Links:
-	* link_visible (bool?)
-Options:
-	* autoload (bool?)
 Post:
 	* post_status
 	* comment_status
