@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   belongs_to :blog
   belongs_to :user, :foreign_key => :post_author
   acts_as_tree :foreign_key => :post_parent, :order => 'post_date_gmt ASC'
+  acts_as_list :column => :menu_order, :scope => :blog_id
 
   def post_status
     if self[:post_status] == 'inherit'
