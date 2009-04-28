@@ -4,6 +4,7 @@ require 'activerecord'
 require 'active_record/acts/tree'
 ActiveRecord::Base.send :include, ActiveRecord::Acts::Tree
 
+Dir.glob(File.join(%w(. lib *extension.rb))).each { |f| require_dependency f }
 Dir.glob(File.join(%w(. lib *.rb))).each { |f| require_dependency f }
 
 # FOR DEVELOPMENT
