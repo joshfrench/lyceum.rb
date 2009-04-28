@@ -1,0 +1,2 @@
+ * Add categories
+ * acts_as_tree (?) on comments, posts; c.f. parent_id
