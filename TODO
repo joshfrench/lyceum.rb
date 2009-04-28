@@ -1,16 +1,13 @@
- * Add categories
- * Scope comments & other models by approved state?
+ * Add categories/taxonomy
  * Normalize namespace (MuFu:: vs. plain)
+ * Acts as List for Post#menu_order
 
 = OPEN QUESTIONS =
+Posts:
+	* kaizen on post_status?
 What are these columns/what values can they hold?
 Post:
-	* post_status
-	* comment_status
-	* ping_status
-	* menu_order
-	* post_type
+	* post_category
 User:
-	* user_status
 	* spam
 	* deleted

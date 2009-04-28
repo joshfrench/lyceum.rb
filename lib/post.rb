@@ -5,4 +5,41 @@ class Post < ActiveRecord::Base
   belongs_to :blog
   belongs_to :user, :foreign_key => :post_author
   acts_as_tree :foreign_key => :post_parent, :order => 'post_date_gmt ASC'
+
+  def post_status
+    if self[:post_status] == 'inherit'
+      (parent && parent.post_status) or nil
+    else
+      self[:post_status]
+    end
+  end
+  
+  %w(draft publish).each do |method|
+    define_method "#{method}?" do
+      self.post_status == method
+    end
+  end
+  
+  %w(post page revision).each do |method|
+    define_method "#{method}?" do
+      self.post_type == method
+    end
+  end
+  
+  def ping_open?
+    ping_status == 'open'
+  end
+  
+  def ping_closed?
+    ping_status == 'closed'
+  end
+  
+  def comment_open?
+    comment_status == 'open'
+  end
+  
+  def comment_closed?
+    comment_status == 'closed'
+  end
+
 end
