@@ -1,6 +1,5 @@
  * Add categories/taxonomy
  * Normalize namespace (MuFu:: vs. plain)
- * Acts as List for Post#menu_order
 
 = OPEN QUESTIONS =
 Posts:
@@ -8,6 +7,3 @@ Posts:
 What are these columns/what values can they hold?
 Post:
 	* post_category
-User:
-	* spam
-	* deleted
