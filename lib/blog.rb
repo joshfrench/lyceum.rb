@@ -3,4 +3,5 @@ class Blog < ActiveRecord::Base
   has_many :registration_logs
   belongs_to :site, :foreign_key => :site_id
   has_many :options
+  has_many :links
 end
