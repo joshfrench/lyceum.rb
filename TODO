@@ -7,3 +7,10 @@ Posts:
 What are these columns/what values can they hold?
 Post:
 	* post_category
+
+= TAXONOMY NOTES =	
+blog has_many :term_taxonomies
+term_relationship has_one object (post/link polymorph) (taxonomy <-> object)
+term_taxonomy has_one term (??? <-> term)
+categories v. tags
+term_taxonomy.taxonomy values = ['link_category' || 'category' || 'post_tag']
