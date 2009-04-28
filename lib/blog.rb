@@ -14,4 +14,7 @@ class Blog < ActiveRecord::Base
       end
     end
   end
+  def archived?
+    archived == 1
+  end
 end
