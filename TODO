@@ -1,11 +1,9 @@
  * Add categories
  * Scope comments & other models by approved state?
+ * Normalize namespace (MuFu:: vs. plain)
 
 = OPEN QUESTIONS =
 What are these columns/what values can they hold?
-Comments:
-	* comment_approved (seems like bool)
-	* comment_type (0; 1; spam; else?)
 Links:
 	* link_visible (bool?)
 Options:
