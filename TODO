@@ -1,2 +1,22 @@
  * Add categories
  * Scope comments & other models by approved state?
+
+= OPEN QUESTIONS =
+What are these columns/what values can they hold?
+Comments:
+	* comment_approved (seems like bool)
+	* comment_type (0; 1; spam; else?)
+Links:
+	* link_visible (bool?)
+Options:
+	* autoload (bool?)
+Post:
+	* post_status
+	* comment_status
+	* ping_status
+	* menu_order
+	* post_type
+User:
+	* user_status
+	* spam
+	* deleted
